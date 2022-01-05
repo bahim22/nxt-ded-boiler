@@ -1,5 +1,5 @@
 
-#Search engline optimization
+# Search engline optimization
 
 `Benefits`
 
@@ -13,3 +13,27 @@ The process of optimizing a website can be divided into three main pillars:
 1. Technical – Optimize your website for crawling and web performance
 2. Creation – Create a content strategy to target specific keywords
 3. Popularity – Boost your site's presence online so search engines know you are a trusted source. This is done through the use of `backlinks` – third-party sites that link back to your site.
+
+ ```bash
+ npm i next-seo
+ ```
+
+> then create header.js
+    > Set proper value of title, desc, ogImgRelativePath, siteURL, etc.
+    > create favicon and put inside public folder
+    import header file to all web pages that need meta targets
+
+```js
+    import Header from "@/components/header";
+
+export default function Home(): JSX.Element {
+  return (
+    <>
+      <Header />
+      ...rest of code
+    </>
+  );
+}
+```
+
+### dynamic sitemap

@@ -214,3 +214,13 @@ export default async () => {
   loadEnvConfig(projectDir)
 }
 ```
+### css
+
+Add SASS/SCSS support to Next.js project
+Run: npm i sass
+
+Rename all *.css files to *.scss
+
+Also, update this change in import statements i.e. import "../styles/globals.scss" , import styles from "../styles/Home.module.scss";
+
+That's all. Start writing css styles in scss syntax
