@@ -224,4 +224,10 @@ ___
 
 ### Babel
 
-npm install --save-dev @babel/core @babel/cli @babel/preset-env
+```bash
+npm install @babel/core @babel/cli @babel/preset-env @babel/preset-flow @babel/preset-react --save-dev
+```
+
+1. add "build": "babel src -d lib" to package.json script profile
+2. add "browserslist": "> 0.25%, not dead" to package.json
+3. add preset options to .babelrc file as options w/ in the next/babel main preset
