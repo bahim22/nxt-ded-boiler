@@ -22,6 +22,7 @@ The3 concepts in process of optimizing a website
 > Create header.js
     - Set proper value of `title`, `desc`, `ogImgRelativePath`, `siteURL`, etc.
     - create `favicon` and put inside public folder
+    - Create an OG Image (preview image) of size 1200x630, name it og.png and put it in public/ folder.
     - import header file to all web pages that need meta targets
 
 ```js

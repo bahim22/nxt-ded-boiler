@@ -144,10 +144,55 @@ npm install --save-dev --save-exact prettier
 "prettier/prettier": "error" turns on the rule provided by this plugin, which runs Prettier from within ESLint.
 "arrow-body-style": "off" and "prefer-arrow-callback": "off"
 >turns off two ESLint core rules that cause issues w/ this plugin
+___
+
+### Husky
+
+`Note`:(lire the livre et ecrive avant d'utiliser)`Note`
+
+1. Improves Git hooks and commits
+   1. Git hooks are scripts that Git executes before or after events such
+   2. as: commit, push, and receive.
+   3. Current Git hooks config in vscode settings and Git Supercharged ext
+2. `husky install` tells Git to use .husky/ as the Git hooks Dir.
+3. `husky add` makes a standalone shell script w/ a  wrapper to support additional feat.
+
+```bash
+npx husky-init && npm install
+```
+
+> add git hook by using husky add (may have to use 2nd cmd on W10)
+> husky add < file> [cmd]
+
+```bash
+npx husky add .husky/commit-msg 'npx --no-install commitlint --edit "$1"'
+git add .husky/pre-commit
+node node_modules/.bin/husky add
+```
+
+> bypass pre-commit and commit-msg hooks using Git -n/--no-verify option
+> For Git commands that don't have a --no-verify option, you can use HUSKY environment variable:
+
+```bash
+git commit -m "yolo!" --no-verify
+HUSKY=0 git push # yolo!
+```
+
+>prepare-commit-msg
+
+side note: you can change temp dir before cmd git init or git clone using:
+
+```bash
+git init --template=/path/to/your/templates/directory/
+git clone https://github.com/bahim22/last-nxt-ded.git --template=/path/to/your/templates/directory/
+
+```
+___
 
 ### Testing
 
-jest testing with `.env.test`
+to get high test coverage
+jest testing with `.env.test` (or use `cypress` for testing)
 
 ```js
 // The below can be used in a Jest global setup file or similar for your testing set-up
@@ -158,6 +203,17 @@ export default async () => {
   loadEnvConfig(projectDir)
 }
 ```
+
+`Cypress`
+helps set up and start writing tests while you build your application locally. After building up a suite of tests and integrating Cypress with your CI Provider, our Dashboard Service can record your test runs
+
+- time travel - snapshots as tests run 2. use dev tools to debug tests 3. auto waits for cmds 4. verify/jcontrol behavior of funcs, server resp 5. network traffic control 6. CI pipeline
+  - set up the tests, write tests, run, debug
+
+Test Types:
+
+- E2E: end to end tests on code that runs in browser (visits app in chrome and interacts w/ the UI)
+- mount components and exe component tests; also create API tests
 
 ### Sass
 
