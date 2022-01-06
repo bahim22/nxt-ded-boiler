@@ -1,8 +1,27 @@
-import { Container, Carousel} from 'react-bootstrap'
+import { Carousel } from 'react-bootstrap'
 import utilStyles from '../styles/utils.module.css'
+import React, { useState, getState } from 'react'
+import PropTypes from 'prop-types'
 
-export function Caro() {
-    return (
+
+export const ExampleTt = ({children}) => {
+const [show, toggleShow] = useState(true)
+
+return (
+  <>
+  {!show && <Button onClick={() => toggleShow(true)}>Show Toast</Button>}
+  <Toast show={show} onClose={() => toggleShow(false)}>
+  <Toast.Header>
+    <strong className="mr-auto">React-Bootstrap</strong>
+  </Toast.Header>
+  <Toast.Body>{children}</Toast.Body>
+  </Toast>
+</>
+)
+}
+
+export function Caro(Image, props, Carousel) {
+return (
 <>
 <Container>
 <Carousel>

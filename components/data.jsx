@@ -32,7 +32,17 @@ image: "./project-4",
 link: "https://github.com/bahim22/ISM",
 },
 ];
+/**
+ * const projects: {
+    title: string;
+    subtitle: string;
+    description: string;
+    image: string;
+    link: string;
+}[]
 
+const skills: string[]
+ */
 export const skills = [
 "JavaScript",
 "React",

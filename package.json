@@ -7,7 +7,7 @@
         "next",
         "next.js"
     ],
-    "description": "Create Next App with customized config files",
+    "description": "Next.js App built with Create Next App cmd with customized config files",
     "repository": {
         "type": "git",
         "url": "https://github.com/bahim22/last-next-ded"

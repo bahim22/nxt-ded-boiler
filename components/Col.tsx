@@ -1,13 +1,13 @@
+/* eslint-disable  */
 import React from 'react';
 import Image from 'next/image'
 import Link from 'next/link'
 //import utilStyles from '../styles/home.module.css'
 //import styles from './layout.module.css'
-import React from 'react'
 
 
 
-const MyButton = React.forwardRef(({ onClick, href }, ref) => {
+const MyButton = React.forwardRef(({ onClick, href }: any, ref) => {
 return (
 <a href={href} onClick={onClick} ref={ref}>
     Click Me
