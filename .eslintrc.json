@@ -1,12 +1,18 @@
 {
+  "root": true,
+  "env": {
+    "browser": true,
+    "es6": true,
+    "node": true
+  },
+    // all plugins (eslint-plugin-xxx) go here:
+  "plugins": [
+    //"@next/eslint-plugin-next"
+  ],
     "extends":
     ["next/core-web-vitals", "prettier"],
     "rules": {
-        "no-confusing-arrow": [
-            "error",
-            {
-                "allowParens": false
-            }
-        ]
+        //"no-confusing-arrow":
+        //["error",{"allowParens": false}]
     }
 }

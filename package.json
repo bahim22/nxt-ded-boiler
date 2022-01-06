@@ -1,6 +1,19 @@
 {
     "name": "szn-de-dio",
     "private": false,
+    "version": "2.2.0",
+    "keywords": [
+        "react",
+        "next",
+        "next.js"
+    ],
+    "description": "Create Next App with customized config files",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/bahim22/last-next-ded"
+    },
+    "author": "Hima 'Dionysus' Balde",
+    "license": "MIT",
     "scripts": {
         "dev": "next dev",
         "build": "next build",

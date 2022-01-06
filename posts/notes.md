@@ -48,9 +48,11 @@ Open [http://localhost:3000](http://localhost:3000)
 ✔️ next/no-typos
 >Ensure no typos were made declaring Next.js's data fetching function
 ✔️ next/next-script-for-ga
->Use the Script component to defer loading of the script until necessary.
->By default, Next.js will run ESLint for all files in the pages/, components/, and lib/ directories
-  but, you can specify which directories using the dirs option in the eslint config in next.config.js for production builds:
+> Use the Script component to defer loading of the script until necessary.
+> By default, Next.js will run ESLint for all files in the pages/, components/, and lib/ Dir.
+> but, you can specify which Dir. using the dirs option in the eslint config in next.config.js for prod. builds:
+
+
 
 ## Packages
 
