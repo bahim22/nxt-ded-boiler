@@ -1,79 +1,22 @@
 
 # Notes for Next App v2.2.0
 
-___
-
 ## Getting Started
 
-First, run the development server:
+___
 
 ```bash
 npx create-next-app
 npm run dev
-
 ```
-
-___
 
 Open [http://localhost:3000](http://localhost:3000)
 
-[API routes](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`.
-Files in this directory are treated as [API routes]
-___
-
-```jsx
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-
-// Importing the Bootstrap CSS
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import Toast from 'react-bootstrap/Toast';
-import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
-
-const ExampleToast = ({ children }) => {
-  const [show, toggleShow] = useState(true);
-
-  return (
-    <React.Fragment>
-      {!show && <Button onClick={() => toggleShow(true)}>Show Toast</Button>}
-      <Toast show={show} onClose={() => toggleShow(false)}>
-        <Toast.Header>
-          <strong className="mr-auto">Dionysus Era</strong>
-        </Toast.Header>
-        <Toast.Body>{children}</Toast.Body>
-      </Toast>
-    </React.Fragment>
-  );
-};
-
-const App = () => (
-  <Container className="p-4 bg-dark">
-    <Container className="p-5 mb-4 bg-light rounded-3">
-      <h1 className="header align-auto">Welcome To HimaLand</h1>
-      <ExampleToast>
-        <a href="mailto:ibalde222@icloud.com">Send email</a>
-        <span role="img" aria-label="tada">
-          🎉
-        </span>
-      </ExampleToast>
-      <Button className='bg-dark p-3 mb-4'/>
-    </Container>
-  </Container>
-);
-```
-
-___
-
-## Setup for create-next-app
+## Package and Config Setup
 
 `ESLint Plugin`
-ruleset:
 
-`Rule` `Description`
+`Ruleset`:
 ✔️ next/google-font-display
 > Enforce optional or swap font-display behavior with Google Fonts
 ✔️ next/google-font-preconnect
@@ -111,16 +54,13 @@ ruleset:
 
 ## Packages
 
--react,react-dom
--linting: eslint, eslint-config-next
-    -@next/eslint-plugin-next
+- Main Project Dep: `react`,`react-dom`, `next`
+- Linting: `eslint`, eslint-config-next (optional: -@next/eslint-plugin-next)
+- `prettier`
+- `babel`
+- `next-seo`
 
-- prettier
-- babel
-- next-seo
-
-- CSS
-  - f
+___
 
 ### ESLint
 
@@ -128,22 +68,21 @@ ruleset:
 module.exports = {
   eslint: {
     dirs: ['pages', 'utils'],
- // Only run ESLint on the 'pages' and 'utils' directories during production builds (next build)
+ // Only run ESLint on the 'pages' & 'utils' Dir during prod builds (next build)
   },
    "extends": "next",
   "rules": {
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off" }
-    //disable/modify rules provided by the supp plugins (react,react-hooks,next) by using rules property in .eslintrc file
+//disable/modify rules of supp plugins (react,react-hooks,next) by using rules property in .eslintrc file
  }
 ```
 
-In general only one .env.local file is needed. However, sometimes you might want to add some defaults for the development (next dev) or production (next start) environment.
+Usually only need 1 `.env.local` file, but you can + defaults for dev (`next dev`) or prod `(next start`) environment, by setting defaults in `.env` (all environments), `.env.development` (dev environment), & `.env.production` (prod environment).
 
-Next.js allows you to set defaults in .env (all environments), .env.development (development environment), and .env.production (production environment).
-
-`Optional` install, then add to webpack config file
->This plugin uses eslint to find and fix problems in your JavaScript code
+___
+`Optional` install dep then + to webpack config file
+>plugin that uses eslint to find and fix issues in js code
 
 ```bash
 npm install eslint-webpack-plugin --save-dev
@@ -155,14 +94,18 @@ const ESLintPlugin = require('eslint-webpack-plugin');
 module.exports = {
   // ...
   plugins: [new ESLintPlugin(options)],
-  // ...
-};
+  // ...};
 ```
+
+___
+___
 
 ### Prettier
 
-- install dep then add prettier to eslint config 
-- (can also test forredundant or conflicting rules per file )
+Use  Prettier for formatting and linters for catching bugs
+
+- install dep then add prettier to eslint config
+- (can also test for redundant or conflicting rules per file )
 
 ```bash
 npm install --save-dev eslint-config-prettier
@@ -195,11 +138,12 @@ npm install --save-dev --save-exact prettier
 }
 ```
 
-"extends": ["prettier"] enables the config from eslint-config-prettier, which turns off some ESLint rules that conflict with Prettier.
+"extends": ["prettier"]
+>enables the config from eslint-config-prettier, which turns off some ESLint rules that conflict with Prettier.
 "plugins": ["prettier"] registers this plugin.
 "prettier/prettier": "error" turns on the rule provided by this plugin, which runs Prettier from within ESLint.
-"arrow-body-style": "off" and "prefer-arrow-callback": "off" turns off two ESLint core rules that unfortunately are problematic with this plugin – see the next section.
-
+"arrow-body-style": "off" and "prefer-arrow-callback": "off"
+>turns off two ESLint core rules that cause issues w/ this plugin
 
 ### Testing
 
@@ -214,13 +158,12 @@ export default async () => {
   loadEnvConfig(projectDir)
 }
 ```
-### css
 
-Add SASS/SCSS support to Next.js project
+### Sass
+
+Add `SASS/SCSS` support to Next.js project
 Run: npm i sass
 
-Rename all *.css files to *.scss
+Rename all *.css files to*.scss
 
 Also, update this change in import statements i.e. import "../styles/globals.scss" , import styles from "../styles/Home.module.scss";
-
-That's all. Start writing css styles in scss syntax
