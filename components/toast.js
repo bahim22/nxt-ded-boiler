@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-undef */
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 /*
@@ -22,10 +23,10 @@ return (
     <Toast.Body>{children}</Toast.Body>
     </Toast>
 </React.Fragment>
-);
+)};
 
 /**Then import compo to app file w/in a container
- * 
+ *
 const App = () => (
   <Container className="p-4 bg-dark">
     <Container className="p-5 mb-4 bg-light rounded-3">
@@ -39,6 +40,6 @@ const App = () => (
       <Button className='bg-dark p-3 mb-4'/>
     </Container>
   </Container>
-);
-
- */
+)
+*
+*/

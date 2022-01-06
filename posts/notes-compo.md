@@ -15,3 +15,12 @@ import { format } from 'date-fns'
 var result = format(new Date(2014, 1, 11), 'MM/dd/yyyy')
 //=> '02/11/2014'
 ```
+
+### Sass
+
+Add `SASS/SCSS` support to Next.js project
+Run: npm i sass
+
+Rename all *.css files to*.scss
+
+Also, update this change in import statements i.e. import "../styles/globals.scss" , import styles from "../styles/Home.module.scss";

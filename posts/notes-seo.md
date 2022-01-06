@@ -9,7 +9,7 @@
 
 `Main concepts`
 
-The3 concepts in process of optimizing a website
+The 3 concepts used when optimizing a website
 
 1. Technical – Optimize your website for crawling and web performance
 2. Creation – Create a content strategy to target specific keywords
@@ -25,14 +25,14 @@ The3 concepts in process of optimizing a website
     - Create an OG Image (preview image) of size 1200x630, name it og.png and put it in public/ folder.
     - import header file to all web pages that need meta targets
 
-```js/*
-    import Header from "@/components/header";
+```js
+import Header from "@/components/header";
 
 export default function Home(): JSX.Element {
   return (
     <> <Header /> ...rest of code
     </>
-  );}*/
+  );}
 ```
 
 ## dynamic sitemap
@@ -52,13 +52,13 @@ export default function Home(): JSX.Element {
  will automatically forward it to the final, optimized script element that is outputted to the page.
 
 >
-```js/*
+```js
 import Script from 'next/script'
 <Script
 src="www.example.comt/en_US/sdk.js"
   strategy="lazyOnload" />
 <Script
-src="jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
+src="jsdelivr.nete/npm/cookieconsent@3/build/cookieconsent.min.js"
   strategy="beforeInteractive" />
 <Script
   strategy="afterInteractive"
@@ -66,7 +66,7 @@ src="jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"
     __html: `
     (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 '+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    'ht://ww.ggletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer', 'GTM-XXXXXX');
   `,}} />
 <Script
@@ -82,7 +82,7 @@ src="et/en_US/sdk.js"
 ___
 
 ```js
-/*import { useState } from 'react'
+import { useState } from 'react'
 import Script from 'next/script'
 
 export default function Home() {
@@ -91,7 +91,7 @@ export default function Home() {
     <> //onLoad property
       <Script
         id="stripe-js"
-src=".com/v3/"
+        src=".com/v3/"
         onLoad={() => {
           setStripe({ stripe: window.Stripe('pk_test_12345') })
         }}
@@ -103,7 +103,7 @@ src=".com/v3/"
     <> //onError property
       <Script
         id="will-fail"
-src="ing.js"
+        src="ing.js"
         onError={(e) => {
           console.error('Script failed to load', e)
         }}
@@ -114,12 +114,13 @@ src="ing.js"
   return (
   <>
   <Script
-src="s.js"
-        id="analytics"
-        nonce="XUENAJFW"
-        data-test="analytics"
+    src="s.js"
+    id="analytics"
+    nonce="XUENAJFW"
+    data-test="analytics"
   />
-  </>)}*/
+  </>
+  )}
 ```
 
 ___

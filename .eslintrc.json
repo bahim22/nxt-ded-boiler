@@ -9,10 +9,10 @@
   "plugins": [
     //"@next/eslint-plugin-next"
   ],
-    "extends":
-    ["next/core-web-vitals", "prettier"],
-    "rules": {
-        //"no-confusing-arrow":
-        //["error",{"allowParens": false}]
-    }
+  "extends":
+  ["next/core-web-vitals", "prettier"],
+  "rules": {
+    "no-confusing-arrow": ["error", { "allowParens": false }],
+    "no-tabs": ["error", {"allowIndentationTabs": true}]
+  }
 }
