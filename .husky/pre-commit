@@ -1,4 +1,0 @@
-#!/bin/sh
-. "$(last-next-ded "$0")/_/husky.sh"
-
-npm test
