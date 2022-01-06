@@ -1,6 +1,6 @@
 {
     "compilerOptions"; {
-    "module"; "commonjs",
+    "module"; "commonjs"
     "target"; "es2020"
   }
     "exclude";

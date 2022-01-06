@@ -18,9 +18,30 @@ var result = format(new Date(2014, 1, 11), 'MM/dd/yyyy')
 
 ### Sass
 
-Add `SASS/SCSS` support to Next.js project
-Run: npm i sass
+Add `SASS/SCSS`
 
-Rename all *.css files to*.scss
+- Run: npm i sass
+- Rename all *.css files to*.scss & update change in import statements
 
-Also, update this change in import statements i.e. import "../styles/globals.scss" , import styles from "../styles/Home.module.scss";
+### Components with propTypes
+
+ parent component w/ children
+  +--------------------------------+
+  |            child 1             |
+  +--------------------------------+
+  |            child 2             |
+  +--------------------------------+
+  |            child 3             |
+  +--------------------------------+
+  |            child 4             |
+  +--------------------------------+
+
+___
+|@param {type} |  var    |    Description |
+| ----------- |--------- |--------|
+|@param {type}|   [var]  |   Description of optional var.|
+|@param {type} |  [var=default]| Descrip of optional var w/ default var.|
+|@param {Object}| objectVar  |   Description.|
+|@param {type} |  objectVar.key| Desc. of a key in the objectVar param. |
+| -------------- |--------------- |---------------|
+___

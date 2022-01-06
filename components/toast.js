@@ -10,7 +10,7 @@ import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 */
 
-const ExampleToast = ({ children }) => {
+export const ExampleToast = ({ children }) => {
 const [show, toggleShow] = useState(true);
 
 return (
