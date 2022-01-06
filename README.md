@@ -1,8 +1,12 @@
 
-# last-nxt-ded
+# Dio-nxt-2 v2.2.0 `last-nxt-ded`
 
-## Dio-nxt-2 v2.2.0
-
-Next app built with create-next-app and bootstrap for Dionysus Era Dev main business page
-
-## Packages
+___
+| Title  | Date  | Author | Description   |
+|------------|---------------|----------------|-----------------|
+| last-nxt-ded | 01/05/2022  | `Hima Balde` | Next App customized |
+___
+| Type     | Use Case  | Draft | OS   |
+|------------|---------------|----------------|-------------|
+| Next App  ⚛️ | Business Project |   Master 🏁 |  macOS ✔️ |
+___
