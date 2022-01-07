@@ -1,4 +1,5 @@
-import react, {useState} from "react";
+import {useState, initialState} from "react";
+import React from "react";
 
 export const projects = [
 {
@@ -36,28 +37,29 @@ link: "https://github.com/bahim22/ISM",
 ];
 
 export const ProjectList = () => {
-    const [skills, setSkills] = useState([
-        {title:"Languages", content:["JavaScript", "React", "Next.js"], id:"1"},
-        {title: "Programs", content: ["GitHub","Azure", "VS Code"], id:"2"}
-        ])
-        return(
-            <div>
-                (skills.map((skill) => ( (
+    const swag = props.swag
+    const Skills = initialState([
+        {title:"Languages", content:["JavaScript"], id:"1"},
+        {title:"Programs", content:["GitHub"], id:"2"},
+        ]);
+
+                (skills.map((skill) =>
+                    <div>{skills}</div>)
+                )
+                return(
                 <section className="main" key={skills.id}>
-                <div className="btn">
-                    <h1 className="title"> {skills.title}</h1>
-                </div>
-                <div className="btn">
-                    <p className="description">{skills.content}</p>
-                </div>
+                    <div className="btn">
+                        <h1 className="title"> {skills.title}</h1>
+                    </div>
+                    <div className="btn">
+                        <p className="description">{skills.content}</p>
+                    </div>
                 </section>
-                ) )))
-            </div>
-        )}
+                )
+            };
 
-
-export const getProjects = ({ skills, title, content, ...props}) => {
-const skillset = props.skillset
+export const GetProjects = ({ skills, title, content, ...props}) => {
+const skillset = props.skillsets
 return(
     <>
     (skills.map((skill) => (
@@ -75,9 +77,18 @@ return(
     </>
 )
 }
+function NumberList(props) {
+ const numbers = props.numbers
+ const listItems = numbers.map((number) => <li key={number.id}>{number}</li>)
+ return <ul>{listItems}</ul>
+}
 
-const [prolist, setprolist] = useState({projects})
-/**const proj = new ProjectList ({ name :})
+
+const skills = props.skills
+const SkilliLists = skills.map((Skillset) => <li key={Skillset.id}>{Skillset}</li>)
+
+//const [prolist, setprolist] = useState({projects})
+/**
  * const projects: {
     title: string;
     subtitle: string;
@@ -88,7 +99,7 @@ const [prolist, setprolist] = useState({projects})
 
 const skills: string[]
  */
-export const skillset = [
+export const Skillset = [
 "JavaScript",
 "React",
 "Next.js",
@@ -98,3 +109,22 @@ export const skillset = [
 "HTML",
 "CSS",
 ];
+
+
+function FormattedDate(props) {
+    return <h2>
+        Lheure est {props.date.toLocaleTimeString()}
+    </h2>
+}; //<Formatted Date date={this.state.date}/>
+
+function Form() {
+    function handleSubmit(e) {
+        e.preventDefault()
+        console.log('Clicked Submit')}
+    return (
+        <form onSubmit={handleSubmit}>
+            <button type="submit">Submit Button</button>
+        </form>
+    )
+}
+///** */

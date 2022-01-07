@@ -21,12 +21,12 @@ export const ExampleToast = ({ children }) => {
   );
 };
 
-export const ButApp = () => (
+export const ToastTwo = () => (
   <Container className="p-3">
     <ToastContainer>
-      <h1 className="header">Welcome To React-Bootstrap</h1>
+      <h1 className="header">Welcome </h1>
       <ExampleToast>
-        We now have Toasts
+        Visit my Projects
         <span role="img" aria-label="tada">
           🎉
         </span>
@@ -67,7 +67,7 @@ export default function LayerTop() {
             </Container>
 
             <Container>
-                <ButApp />
+                <ToastTwo />
             </Container>
             <div>
               <div className='gap={3}'>

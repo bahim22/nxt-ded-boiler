@@ -78,6 +78,7 @@ color: palevioletred;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: col;
   max-width: 800px;
 }
 
@@ -108,7 +109,7 @@ color: palevioletred;
   background: transparent;
   color: rgb(75, 112, 119);
   border: 2px dotted rgb(8, 8, 8);}
-  
+
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
@@ -123,6 +124,11 @@ color: palevioletred;
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+.nav {
+  justify: content-end;
+  flex: flex-grow-1;
+  padding: pe-3
 }
 
 @media (max-width: 600px) {
