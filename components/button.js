@@ -86,40 +86,23 @@ function Header(props) {
 return (
 <nav className="navbar navbar-dark bg-primary fixed-top">
     <Link className="navbar-brand" to="/">
-    JollofJS Documentation App
+    Dionysus Era
     </Link>
     <button className="btn btn-dark">Sign In</button>
 </nav>
 );
 }
-const Button = styled.a`
-  /* This renders the buttons above... Edit me! */
-  display: inline-block;
-  border-radius: 10px;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 2rem 2rem 2rem 2rem;
-  width: 15rem;
-  background: transparent;
-  color: white;
-  border: 2px dotted white;
 
-  /* The GitHub button is a primary button
-   * edit this to target it specifically! */
-  ${props => props.primary && css`
-    background: black;
-    color: red;
-  `}
-`
 
-render(
+return(
   <div>
     <Button
-      href="https://github.com/styled-components/styled-components"
+      href="https://github.com/bahim22/last-nxt-ded"
       target="_blank"
       rel="noopener"
       primary
     >
-      GitHub
+      Dionysus GitHub Pro
     </Button>
 
     <Button as={Link} href="/docs">
@@ -127,38 +110,4 @@ render(
     </Button>
   </div>
 )
-const Button = styled.a`
-  /* This renders the buttons above... Edit me! */
-  display: inline-block;
-  border-radius: 10px;
-  padding: 1rem 1rem 1rem 1rem;
-  margin: 2rem 2rem 2rem 2rem;
-  width: 15rem;
-  background: transparent;
-  color: white;
-  border: 2px dotted white;
-
-  /* The GitHub button is a primary button
-   * edit this to target it specifically! */
-  ${props => props.primary && css`
-    background: black;
-    color: red;
-  `}
-`
-
-render(
-  <div>
-    <Button
-      href="https://github.com/styled-components/styled-components"
-      target="_blank"
-      rel="noopener"
-      primary
-    >
-      GitHub
-    </Button>
-
-    <Button as={Link} href="/docs">
-      Documentation
-    </Button>
-  </div>
-)
+const Button = 

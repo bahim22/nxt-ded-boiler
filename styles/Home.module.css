@@ -11,7 +11,15 @@
   justify-content: center;
   align-items: center;
 }
-
+.wrapper{
+padding: 4em;
+background: azure;
+}
+.title h1, h2, h3, h4 {
+font-size: 1.5em;
+text-align: center;
+color: palevioletred;
+}
 .footer {
   display: flex;
   flex: 1;
@@ -91,7 +99,16 @@
   color: #0070f3;
   border-color: #0070f3;
 }
-
+.button{
+  display: inline-block;
+  border-radius: 10px;
+  padding: 1rem 1rem 1rem 1rem;
+  margin: 2rem 2rem 2rem 2rem;
+  width: 15rem;
+  background: transparent;
+  color: rgb(75, 112, 119);
+  border: 2px dotted rgb(8, 8, 8);}
+  
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
