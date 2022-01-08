@@ -1,13 +1,11 @@
-
-# Next Pages info
-
-## Api
-
-___
-[API routes](http://localhost:3000/api/hello).
-> Edit endpoint in `pages/api/hello.js`.
-> `pages/api` Dir. is mapped to `/api/*`, where the files are viewed as [API routes]
-___
+---
+title: 'Routing Info'
+author: 'Hima Balde'
+id: 1
+pid: '1'
+date: '01-6-2-22
+---
+## Next Pages info
 
 ## Routing
 
