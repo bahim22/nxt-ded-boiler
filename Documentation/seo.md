@@ -35,8 +35,6 @@ export default function Home(): JSX.Element {
   );}
 ```
 
-## dynamic sitemap
-
 ## Next Script
 
 `Script component`  enables you to put 3rd-party script in their app and optimizing the loading strategy.

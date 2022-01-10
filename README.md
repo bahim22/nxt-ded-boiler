@@ -8,5 +8,5 @@ ___
 ___
 | Type     | Use Case  | Draft | OS   |
 |------------|---------------|----------------|-------------|
-| Next App  ⚛️ | Business Project |   Master 🏁 |  macOS ✔️ |
+| Next App  ⚛️ | Template Project |   Master 🏁 |  macOS ✔️ |
 ___

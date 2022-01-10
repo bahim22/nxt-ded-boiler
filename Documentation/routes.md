@@ -3,7 +3,7 @@ title: 'Routing Info'
 author: 'Hima Balde'
 id: 1
 pid: '1'
-date: '01-6-2-22
+date: '01-6-22
 ---
 ## Next Pages info
 
@@ -67,10 +67,12 @@ export default function Home() {
     </ul>
   )
 };
+```
 
-// Option for Link ex.2; adding brackets to a page ([param]) to create a dynamic route 
-// (e.g. url slugs, pretty urls, etc)
+Option for Link ex.2; adding brackets to a page ([param]) to create a dynamic route
+(e.g. url slugs, pretty urls, etc)
 
+```js
 import Link from 'next/link'
 
 export default Home = () => {
@@ -94,5 +96,5 @@ export default Home = () => {
 ___
 
 `Catching all routes`
-Dynamic routes can be extended to catch all paths by + three dots (...) inside  brackets. 
+Dynamic routes can be extended to catch all paths by + three dots (...) inside  brackets.
 >Ex. pages/post/[...slug].js (or use [...param]) matches /post/a, but also /post/a/b, /post/a/b/c

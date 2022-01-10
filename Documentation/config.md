@@ -1,16 +1,7 @@
 
 # Notes for Next App v2.2.0
 
-## Getting Started
-
 ___
-
-```bash
-npx create-next-app
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000)
 
 ## Package and Config Setup
 
@@ -19,6 +10,7 @@ Open [http://localhost:3000](http://localhost:3000)
 `Ruleset`:
 ✔️ next/google-font-display
 > Enforce optional or swap font-display behavior with Google Fonts
+
 ✔️ next/google-font-preconnect
 > Enforce preconnect usage with Google Fonts
 ✔️ next/link-passhref
@@ -138,67 +130,6 @@ npx eslint-config-prettier pages/index.js
 ```
 
 ___
-> `Example` _package.json with prettier, eslint and babel_
-  > dependencies (may use some depending on type of project and other dep)
-
-```json
-  "scripts": {
-    "doctoc": "doctoc README.md && replace \"\\[\\[([\\w/-]+)\\](?:([^\\[\\]]+)\\[([\\w/-]+)\\])?\\]\" \"[\\$1\\$2\\$3]\" README.md",
-    "prettier": "prettier --write .",
-    "test:lint": "eslint . && prettier --check .",
-    "test:lint-verify-fail": "eslint \"test-lint/*.{js,ts,vue}\" --config .eslintrc.base.js --format json",
-    "test:lint-rules": "eslint index.js --config test-config/.eslintrc.js --format json",
-    "test:deprecated": "eslint-find-rules --deprecated index.js",
-    "test:jest": "jest",
-    "test": "npm run test:lint && npm run test:jest && npm run test:cli-sanity && npm run test:cli-sanity-warning && npm run build",
-    "build": "node scripts/build.js"
-  },
-  "devDependencies": {
-    "@babel/eslint-parser": "7.13.14",
-    "@babel/eslint-plugin": "7.13.16",
-    "@babel/plugin-syntax-flow": "7.12.13",
-    "@babel/plugin-syntax-jsx": "7.12.13",
-    "doctoc": "2.0.0",
-    "eslint": "7.25.0",
-    "eslint-config-google": "0.14.0",
-    "eslint-find-rules": "3.6.1",
-    "eslint-plugin-babel": "5.3.1",
-    "eslint-plugin-flowtype": "5.7.2",
-    "eslint-plugin-prettier": "3.4.0",
-    "eslint-plugin-react": "7.23.2",
-    "eslint-plugin-standard": "4.0.2",
-    "eslint-plugin-unicorn": "31.0.0",
-    "jest": "26.6.3",
-    "prettier": "2.2.1",
-    "replace": "1.2.1",
-    "rimraf": "3.0.2",
-  }
-```
-
->`Example` _Next.js package.json_
-
-```json
-  "scripts": {
-    "dev": "ncc build ./index.ts -w -o dist/",
-    "prerelease": "rimraf ./dist/",
-    "release": "ncc build ./index.ts -o ./dist/ --minify --no-cache --no-source-map-register",
-    "prepublish": "yarn release"
-  },
-  "devDependencies": {
-    "@vercel/ncc": "0.33.1",
-    "async-retry": "1.3.1",
-    "chalk": "2.4.2",
-    "commander": "2.20.0",
-    "cpy": "7.3.0",
-    "cross-spawn": "6.0.5",
-    "got": "10.7.0",
-    "prompts": "2.1.0",
-    "rimraf": "3.0.0",
-    "tar": "4.4.10",
-    "update-check": "1.5.4",
-    "validate-npm-package-name": "3.0.0"
-  }
-```
 
 `eslint plugin prettier`
 plugin:prettier/recommended
