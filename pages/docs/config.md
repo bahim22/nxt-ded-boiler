@@ -102,12 +102,10 @@ ___
 
 ```bash
 npm install --save-dev --save-exact prettier
-echo {}> .prettierrc.json
+echo{} > .prettierrc.json
 npx prettier --write .
 npx prettier --check .
 ```
-
-Use  Prettier for formatting and linters for catching bugs
 
 - install dep then add prettier to eslint config
 - (can also test for redundant or conflicting rules per file )
