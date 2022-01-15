@@ -8,7 +8,7 @@ const footTitle = 'DED Next Portfolio'
       <footer className={styles.footer}>
         <h1>{footTitle}</h1>
         <a href="https://github.com/bahim22" target="_blank" rel="noopener noreferrer" />
-        Dionysus
+        Dionysus Era Dev
           <a href="https://github.com/bahim22" target="_blank" rel="noopener noreferrer">
             GULLO{' '}
             <span className={styles.logo}>
