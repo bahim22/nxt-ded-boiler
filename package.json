@@ -16,6 +16,7 @@
     "license": "MIT",
     "scripts": {
         "dev": "next dev",
+        "prettier": "prettier --write .",
         "build": "next build",
         "start": "next start",
         "lint": "next lint"

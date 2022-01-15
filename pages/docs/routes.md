@@ -5,6 +5,7 @@ id: 1
 pid: '1'
 date: '01-6-22
 ---
+
 ## Next Pages info
 
 ## Routing
@@ -43,9 +44,7 @@ export default Post
 > This allows /post/1, /post/abc,to match w/ pages/post/[pid].js.Then the path param is sent as a query param to the page, and also merged w/ the other query param.
 ___
 
-```jsx
-import Link from 'next/link'
-
+```js
 export default function Home() {
   return (
     <ul>
@@ -65,15 +64,12 @@ export default function Home() {
         </Link>
       </li>
     </ul>
-  )
-};
+  )}
 ```
 
-Option for Link ex.2; adding brackets to a page ([param]) to create a dynamic route
-(e.g. url slugs, pretty urls, etc)
+> Option for Link ex.2; adding brackets to a page ([param]) to create a dynamic route (e.g. url slugs, pretty urls, etc)
 
 ```js
-import Link from 'next/link'
 
 export default Home = () => {
   return (
@@ -97,4 +93,4 @@ ___
 
 `Catching all routes`
 Dynamic routes can be extended to catch all paths by + three dots (...) inside  brackets.
->Ex. pages/post/[...slug].js (or use [...param]) matches /post/a, but also /post/a/b, /post/a/b/c
+> Ex. pages/post/[...slug].js (or use [...param]) matches /post/a, but also /post/a/b, /post/a/b/c
